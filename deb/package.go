@@ -570,14 +570,8 @@ func (p *Package) Stanza() (result Stanza) {
 		if f.Checksums.MD5 != "" {
 			result["MD5sum"] = f.Checksums.MD5
 		}
-		if f.Checksums.SHA1 != "" {
-			result["SHA1"] = f.Checksums.SHA1
-		}
 		if f.Checksums.SHA256 != "" {
 			result["SHA256"] = f.Checksums.SHA256
-		}
-		if f.Checksums.SHA512 != "" {
-			result["SHA512"] = f.Checksums.SHA512
 		}
 		result["Size"] = fmt.Sprintf("%d", f.Checksums.Size)
 	}
